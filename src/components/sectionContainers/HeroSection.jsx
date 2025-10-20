@@ -79,7 +79,7 @@ const HeroSection = () => {
 
         src={surveyImage}
         alt=""
-        className="h-[22rem] w-[23rem] sm:h-[25rem] md:h-[28rem] md:w-[28rem]"
+        className="h-[22rem] w-[23rem] sm:h-[25rem] md:h-[28rem] md:w-[28rem] mx-auto"
       />
     </div>
   );
