@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* @font-face {
+  font-family: 'SF Pro Display';
+  src: url('/src/assets/fonts/SFPro/SFProDisplay-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+} */
+
+/* @font-face {
+  font-family: 'SF Pro Display';
+  src: url('/src/assets/fonts/SFPro/SFProDisplay-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+} */
+
+/* @font-face {
+  font-family: 'SF Pro Display';
+  src: url('/src/assets/fonts/SFPro/SFProDisplay-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+} */
