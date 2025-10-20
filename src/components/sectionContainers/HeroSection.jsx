@@ -39,7 +39,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="w-full sm:min-h-[40rem] mx-auto py-10 flex flex-col items-center justify-center sm:gap-3 gap-7 md:flex-col lg:flex-row ">
+    <div className="w-full sm:min-h-[40rem] mx-auto py-10 flex flex-col items-center justify-center sm:gap-3 gap-7 md:flex-col lg:flex-row overflow-hidden">
       <motion.div
         //? Animates the entire text container when it enters view
         initial="hidden"
