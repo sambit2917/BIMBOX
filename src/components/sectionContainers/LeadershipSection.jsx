@@ -69,7 +69,7 @@ const LeadershipSection = () => {
                 alt={i}
                 className="lg:h-[20rem] w-[15rem] lg:w-[20rem] rounded-[42px]"
               />
-              <h1 className="text-3xl md:text-5xl text-[#0059FF] font-inter font-normal leading-[112.00000000000001%f] mt-3">
+              <h1 className="text-3xl md:text-5xl text-[#0059FF] font-inter font-normal leading-[112.00000000000001%] mt-3">
                 {ele.name}
               </h1>
               <p className="text-lg md:text-2xl leading-[112.00000000000001%] text-[#111B2D] font-inter font-normal">
