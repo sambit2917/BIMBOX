@@ -39,13 +39,13 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="w-full sm:min-h-[40rem] mx-auto py-10 flex flex-col items-center justify-center sm:gap-3 gap-7 md:flex-col lg:flex-row overflow-hidden">
+    <div className="w-full sm:min-h-[40rem] mx-auto py-10 flex flex-col items-center justify-center gap-7 sm:gap-3 md:flex-col lg:flex lg:flex-row lg:justify-center lg:items-center lg:gap-7 overflow-hidden ">
       <motion.div
         //? Animates the entire text container when it enters view
         initial="hidden"
         whileInView = "visible"
         viewport={{  amount: 0.3 }} //? Trigger when 30% of the container is in view
-        className="sm:w-1/2 md:w-[70%] lg:w-1/2 sm:h-[31.8rem] lg:h-[28rem] flex flex-col items-center sm:flex sm:flex-col sm:items-start justify-center gap-8 px-5 py-7 md:flex md:flex-col md:items-center lg:flex lg:items-start"
+        className="sm:w-1/2 md:w-[70%] lg:w-[45%] sm:h-[31.8rem] lg:h-[28rem] flex flex-col items-center sm:flex sm:flex-col sm:items-start justify-center gap-8 px-5 py-7 md:flex md:flex-col md:items-center lg:flex lg:items-start"
       >
         <motion.h1
           variants={textvariants} //? Use variants for h1
@@ -79,7 +79,7 @@ const HeroSection = () => {
 
         src={surveyImage}
         alt=""
-        className="h-[22rem] w-[23rem] sm:h-[25rem] md:h-[28rem] md:w-[28rem] mx-auto"
+        className="h-[22rem] w-[23rem] sm:h-[25rem] md:h-[28rem] md:w-[28rem]"
       />
     </div>
   );
