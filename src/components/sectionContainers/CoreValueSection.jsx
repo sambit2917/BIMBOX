@@ -47,7 +47,7 @@ const CoreValueSection = () => {
     })
   }
   return (
-    <div className="w-full bg-[#F1F5F9] flex flex-col gap-8 px-5 py-16 sm:px-10 sm:py-20 md:px-12 md:py-24 lg:px-20 lg:py-28">
+    <div className="w-full bg-[#F1F5F9] flex flex-col gap-14 px-5 py-16 sm:px-10 sm:py-20 md:px-12 md:py-24 lg:px-20 lg:py-28">
       <motion.h1
         variants = {headingVariant}
         initial = "hidden"
@@ -57,18 +57,18 @@ const CoreValueSection = () => {
         Our core values
       </motion.h1>
       {/* Changed grid layout for larger screens */}
-      <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-12 lg:grid-cols-2 lg:grid-rows-2 lg:gap-x-4 xl:gap-6">
+      <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-12 lg:grid-cols-2 lg:grid-rows-2 lg:gap-x-8 lg:gap-y-12 ">
         {coreData.map((ele, i) => {
           return (
             <motion.div
-              variants = {cardVariant}
-              initial = "hidden"
-              whileInView = "visible"
-              viewport = {{amount: 0.3}}
+              variants={cardVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ amount: 0.3 }}
               key={i}
               className="flex flex-col items-center text-center gap-4 sm:gap-5 lg:flex lg:flex-row lg:gap-4"
             >
-              <div className="bg-[#0059FF] w-24 h-24 rounded-[50%] flex items-center justify-center sm:w-28 sm:h-28 lg:w-[15rem] lg:h-[5rem]">
+              <div className="bg-[#0059FF] w-20 h-20 sm:w-24 sm:h-24 lg:w-[12rem] lg:h-[4.7rem] rounded-[50%] flex items-center justify-center">
                 <img
                   src={ele.image}
                   alt=""
@@ -76,10 +76,10 @@ const CoreValueSection = () => {
                 />
               </div>
               <div className="flex flex-col items-center gap-2 sm:gap-3 ">
-                <h1 className="text-xl text-[#111B2D] font-inter font-medium leading-tight tracking-[-0.5px] sm:text-2xl md:text-3xl lg:text-2xl lg:text-left xl:text-4xl w-full">
+                <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl lg:text-left  text-[#111B2D] font-inter font-medium leading-tight tracking-[-0.5px]  w-full">
                   {ele.header}
                 </h1>
-                <p className="text-base text-[#111B2D] font-inter font-normal leading-normal tracking-[-0.25px] sm:text-lg md:text-xl lg:text-lg lg:text-left xl:text-2xl">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl  lg:text-left  text-[#111B2D] font-inter font-normal leading-normal tracking-[-0.25px]">
                   {ele.desc}
                 </p>
               </div>
