@@ -26,7 +26,7 @@ const MissonSection = () => {
         variants={sideInfromRight}
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: 0.5 }}
+        // viewport={{ amount: 0.5 }}
         className="bg-[#0058FF] text-white rounded-[20px] sm:rounded-[30px] md:rounded-[40px] lg:rounded-[30px] w-full sm:w-[90%] md:w-[80%] lg:h-[25rem] lg:w-[45%] xl:w-[40%] py-8 px-6 sm:py-10 sm:px-10 md:py-12 md:px-12 lg:px-14 lg:py-16 z-20 lg:mr-[13rem] lg:self-end shadow-lg lg:border-white lg:border-[1rem] "
       >
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2rem] font-semibold mb-3 font-sfpro">
@@ -45,8 +45,8 @@ const MissonSection = () => {
         variants={sideInfromLeft}
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: 0.5 }}
-        className="bg-[#0059FF] text-white rounded-[20px] sm:rounded-[30px] md:rounded-[40px] lg:rounded-[30px] w-full sm:w-[90%] md:w-[80%] lg:w-[45%] lg:h-[25rem] xl:w-[40%] py-8 px-6 sm:py-10 sm:px-10 md:py-12 md:px-12 lg:px-14 lg:py-16 z-10 lg:ml-[10rem] lg:self-start lg:-mt-[10rem] shadow-lg "
+        // viewport={{ amount: 0.5 }}
+        className="bg-[#0059FF] text-white rounded-[20px] sm:rounded-[30px] md:rounded-[40px] lg:rounded-[30px] w-full sm:w-[90%] md:w-[80%] lg:w-[45%] lg:h-[25rem] xl:w-[40%] py-8 px-6 sm:py-10 sm:px-10 md:py-12 md:px-12 lg:px-14 lg:py-16 z-10 lg:ml-[10rem] lg:self-start mt-10 lg:-mt-[10rem] shadow-lg "
       >
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2rem] font-semibold mb-3 font-sfpro">
           Our Mission
