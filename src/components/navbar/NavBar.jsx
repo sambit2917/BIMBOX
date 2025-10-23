@@ -20,10 +20,46 @@ const NavBar = () => {
         {/* Desktop/Tablet Navigation Links */}
         {/* Changed from hidden md:flex to hidden lg:flex to show on tablet */}
         <ul className="hidden lg:flex items-center gap-6 lg:gap-8 uppercase text-base lg:text-lg text-[#111B2D] font-normal">
-          <NavLink to="/homeSection" className={({isActive})=> isActive ? `text-blue-500 font-semibold`: `hover:underline cursor-pointer`}>Home</NavLink>
-          <NavLink to="/about" className={({isActive})=> isActive ? `text-blue-500 font-semibold` :`hover:underline cursor-pointer`}>About</NavLink>
-          <NavLink to="/product" className={({isActive})=> isActive ? `text-blue-500 font-semibold` : `hover:underline cursor-pointer`}>Product</NavLink>
-          <NavLink to="/pricing" className={({isActive})=> isActive ? `text-blue-500 font-semibold` : `hover:underline cursor-pointer`}>Pricing</NavLink>
+          <NavLink
+            to="/homeSection"
+            className={({ isActive }) =>
+              isActive
+                ? `text-blue-500 font-semibold`
+                : `hover:underline cursor-pointer`
+            }
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive
+                ? `text-blue-500 font-semibold`
+                : `hover:underline cursor-pointer`
+            }
+          >
+            About
+          </NavLink>
+          <NavLink
+            to="/product"
+            className={({ isActive }) =>
+              isActive
+                ? `text-blue-500 font-semibold`
+                : `hover:underline cursor-pointer`
+            }
+          >
+            Product
+          </NavLink>
+          <NavLink
+            to="/pricing"
+            className={({ isActive }) =>
+              isActive
+                ? `text-blue-500 font-semibold`
+                : `hover:underline cursor-pointer`
+            }
+          >
+            Pricing
+          </NavLink>
         </ul>
 
         {/* Desktop/Tablet Buttons */}
@@ -58,10 +94,10 @@ const NavBar = () => {
         }`}
       >
         <ul className="flex flex-col items-center gap-5 py-6 uppercase text-base text-[#111B2D] font-normal">
-          <li className="hover:underline cursor-pointer py-2">Home</li>
-          <li className="hover:underline cursor-pointer py-2">About</li>
-          <li className="hover:underline cursor-pointer py-2">Product</li>
-          <li className="hover:underline cursor-pointer py-2">Pricing</li>
+          <NavLink to="/homeSection" className="hover:underline cursor-pointer py-2">Home</NavLink>
+          <NavLink to="/about" className="hover:underline cursor-pointer py-2">About</NavLink>
+          <NavLink to="/product" className="hover:underline cursor-pointer py-2">Product</NavLink>
+          <NavLink to="/pricing" className="hover:underline cursor-pointer py-2">Pricing</NavLink>
 
           {/* Mobile/Tablet Buttons */}
           <div className="flex flex-col gap-3 mt-4 w-11/12 max-w-xs px-4">
