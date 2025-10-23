@@ -55,28 +55,29 @@ const ConstructionSection = () => {
       {imageData.map((ele, i) => {
         return (
           <motion.div
-            variants = {itemVariants}
-            initial = "hidden"
-            whileInView = "visible"
-            viewport = {{amount: 0.3}}
+            variants={itemVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.3 }}
             key={i}
             className={`flex flex-col items-center md:flex md:flex-col text-center sm:text-left sm:flex-row lg:flex lg:flex-row lg:justify-center md:max-w-7xl lg:min-w-full ${
               i % 2 !== 0 ? "sm:flex-row-reverse lg:flex-row-reverse" : ""
             } gap-8 md:gap-16 lg:gap-14`}
           >
             <motion.img
-              variants = {imageVariant}
+              variants={imageVariant}
               src={ele.image}
               alt={ele.header}
-              className="w-full max-w-sm h-auto md:h-[20rem] lg:h-[20rem] lg:max-w-[20rem] rounded-3xl object-cover sm:max-w-md md:max-w-[30rem]"
+              className=" max-w-[20rem] md:h-[20rem] lg:h-[20rem] sm:max-w-md md:max-w-[30rem] lg:max-w-[20rem] rounded-3xl object-cover "
             />
             <motion.div
-              variants = {textvariant} 
-              className="flex flex-col justify-center min-w-lg md:items-center lg:w-[50%]">
-              <h1 className="text-3xl sm:text-4xl md:text-center lg:text-[38px] text-[#0059FF] font-inter font-bold hover:underline cursor-pointer mb-4 md:w-[60%] lg:w-full">
+              variants={textvariant}
+              className="flex flex-col justify-center min-w-lg md:items-center lg:items-start lg:w-[60%]"
+            >
+              <h1 className="text-2xl sm:text-2xl lg:text-3xl md:text-center lg:text-left text-[#0059FF] font-inter font-bold hover:underline cursor-pointer mb-4 md:w-[60%] lg:w-full">
                 {ele.header}
               </h1>
-              <p className="text-base md:text-lg md:text-center sm:text-xl lg:text-2xl text-[#203C6E] font-inter font-extralight leading-[129%] tracking-[-1px] hover:underline cursor-pointer md:w-[60%] lg:w-[80%]">
+              <p className="text-base md:text-lg md:text-center sm:text-xl lg:text-xl lg:text-left text-[#203C6E] font-inter font-extralight leading-[129%] tracking-[-1px] hover:underline cursor-pointer md:w-[60%] lg:w-[70%]">
                 {ele.desc}
               </p>
             </motion.div>
