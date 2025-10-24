@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import surveyImage from "../../assets/images/SurveyImage.png";
 import { motion } from "framer-motion";
+import { pre } from "framer-motion/client";
+import QuoteModal from "../pages/QuoteModal";
 
 const HeroSection = () => {
+  const [open, setOpen] = useState(false);
+
   //? Variant for the text content
   const textvariants = {
     hidden: { opacity: 0, y: 50 },
@@ -43,8 +47,8 @@ const HeroSection = () => {
       <motion.div
         //? Animates the entire text container when it enters view
         initial="hidden"
-        whileInView = "visible"
-        viewport={{  amount: 0.3 }} //? Trigger when 30% of the container is in view
+        whileInView="visible"
+        viewport={{ amount: 0.3 }} //? Trigger when 30% of the container is in view
         className="sm:w-1/2 md:w-[70%] lg:w-[45%] sm:h-[31.8rem] lg:h-[28rem] flex flex-col items-center sm:flex sm:flex-col sm:items-start justify-center gap-8 px-5 py-7 md:flex md:flex-col md:items-center lg:flex lg:items-start"
       >
         <motion.h1
@@ -63,20 +67,27 @@ const HeroSection = () => {
           clearly, share it instantly, and move work forward.
         </motion.p>
 
-        <motion.button
+        <motion.span
           variants={buttonVariants}
           transition={{ delay: 0.4 }}
           className="px-6 py-3 sm:px-9 sm:py-3 lg:px-9 lg:py-4 border rounded-[2.1rem] bg-gradient-to-r from-[#2763E5] via-[#0059FF] to-[#2087F4] text-lg leading-[100%] text-white font-sfpro font-medium"
+          onClick={() => setOpen((prev) => !prev)}
         >
           Get a Custom quote
-        </motion.button>
+          {open && (
+            <QuoteModal
+              onClose={() => {
+                setOpen(false);
+              }}
+            />
+          )}
+        </motion.span>
       </motion.div>
       <motion.img
-        variants = {imageVariant}
-        initial = "hidden"
-        whileInView = "visible"
-        viewport = {{ amount: 0.3}}
-
+        variants={imageVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
         src={surveyImage}
         alt=""
         className="max-w-[20rem] md:h-[28rem] md:min-w-[28rem] lg:min-w-[28rem]"

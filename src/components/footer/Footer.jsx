@@ -1,10 +1,11 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import FooterList from "./footerIterator/FooterList";
 import LowerFooter from "./footerIterator/LowerFooter";
 import MidFooter from "./footerIterator/MidFooter";
 import { motion, useInView } from "framer-motion";
 
 const Footer = () => {
+  const [open, setOpen] = useState(false)
   const ref = useRef(null)
   const isInview = useInView(ref,{amount: 0.2})
   
@@ -36,9 +37,9 @@ const Footer = () => {
           <button className="px-6 py-3 sm:px-7 sm:py-4 text-[#0059FF] text-base sm:text-lg lg:text-xl leading-[100%] font-sfpro font-semibold bg-white rounded-full whitespace-nowrap">
             Talk to Expert
           </button>
-          <button className="px-6 py-3 sm:px-8 sm:py-4 border border-white text-base sm:text-lg lg:text-xl leading-[100%] text-[#FFFFFF] font-sfpro font-bold rounded-full whitespace-nowrap">
+          <span className="px-6 py-3 sm:px-8 sm:py-4 border border-white text-base sm:text-lg lg:text-xl leading-[100%] text-[#FFFFFF] font-sfpro font-bold rounded-full whitespace-nowrap">
             Get a quote
-          </button>
+          </span>
         </div>
       </motion.div>
 
