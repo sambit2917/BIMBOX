@@ -50,7 +50,7 @@ const AboutPage = () => {
     },
   ];
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="w-full flex flex-col items-center pt-5">
       {/* Hero Section */}
       <div className="w-full bg-gradient-to-r from-[#0059FF] to-[#0CB7FA] py-20 px-5 sm:py-24 sm:px-10 md:py-32 lg:py-40 flex flex-col items-center text-center">
         <motion.h1

@@ -1,6 +1,6 @@
 import React from "react";
 import HomeSection from "./components/sectionContainers/HomeSection";
-import { createBrowserRouter, RouterProvider } from "react-router";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainLayout from "./components/layouts/MainLayout";
 import AuthLayout from "./components/layouts/AuthLayout";
 import AboutPage from "./components/pages/AboutPage";
@@ -15,18 +15,12 @@ const App = () => {
       element: <MainLayout />,
       children: [
         {
-          path: "/",
+          index: true, //? Make <HomePage /> load automatically for "/"
           element: <HomePage />,
         },
-      ],
-    },
-    {
-      path: "/",
-      element: <AuthLayout />,
-      children: [
         {
           path: "/homeSection",
-          element: <HomeSection/>
+          element: <HomeSection />,
         },
         {
           path: "/about",
@@ -41,6 +35,11 @@ const App = () => {
           element: <PricingPage />,
         },
       ],
+    },
+    {
+      path: "/",
+      element: <AuthLayout />,
+      children: [],
     },
   ]);
   return (

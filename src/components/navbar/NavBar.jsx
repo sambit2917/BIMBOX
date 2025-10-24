@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import logo from "../../assets/images/BimboxLogo.png";
 import contact from "../../assets/images/ContactLogo.png";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
-import { NavLink } from "react-router";
-import HomePage from "../pages/HomePage";
+import { NavLink } from "react-router-dom";
+// import HomePage from "../pages/HomePage";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
