@@ -72,7 +72,7 @@ const ConstructionSection = () => {
             />
             <motion.div
               variants={textvariant}
-              className="flex flex-col justify-center min-w-lg md:items-center lg:items-start lg:w-[60%]"
+              className="flex flex-col justify-center min-w-lg md:items-center lg:items-start lg:w-[40%]"
             >
               <h1 className="text-2xl sm:text-2xl lg:text-3xl md:text-center lg:text-left text-[#0059FF] font-inter font-bold hover:underline cursor-pointer mb-4 md:w-[60%] lg:w-full">
                 {ele.header}
