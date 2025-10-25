@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { RxCross1 } from "react-icons/rx";
 
 const QuoteModal = ({ onClose }) => {
@@ -8,12 +8,12 @@ const QuoteModal = ({ onClose }) => {
     phonenumber: "",
     product: "",
     postContent: "",
-  })
+  });
 
   const handleChange = (e) => {
-    const {name, value} = e.target;
-    setInputs({...inputs, [name]: value})
-  }
+    const { name, value } = e.target;
+    setInputs({ ...inputs, [name]: value });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,17 +23,26 @@ const QuoteModal = ({ onClose }) => {
       phonenumber: "",
       product: "",
       postContent: "",
-    })
-    console.log(inputs)
-  }
+    });
+    console.log(inputs);
+  };
+
+  //? TO stop the body content scrolling while the modal is open.
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
+
   return (
     <div
-      className="fixed inset-0 bg-black/50 flex items-center justify-center px-4 sm:px-6 z-50"
+      className="fixed inset-0 bg-black/50 flex items-center justify-center py-8 px-4 sm:px-6 z-[60]"
       onClick={onClose}
     >
       <div
         className="w-full max-w-lg sm:max-w-2xl md:max-w-3xl h-[35rem] bg-white rounded-2xl overflow-hidden flex flex-col items-center gap-6 shadow-xl animate-slideUp"
-        onClick={(e) => e.stopPropagation()}
+        onClick={(e) => e.stopPropagation()}  
       >
         {/* Header */}
         <div className="w-full bg-[#F4F4F2] py-4 px-6 flex justify-between items-center">

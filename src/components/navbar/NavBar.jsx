@@ -9,7 +9,7 @@ const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="m-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 py-4 sm:py-4 md:py-5 lg:py-7 xl:pt-10 fixed top-0 left-0 font-inter z-50 bg-white">
+    <nav className="m-auto w-full px-4 sm:px-6 md:px-8 lg:px-14 xl:px-[11.5rem] py-4 sm:py-4 md:py-5 lg:py-6 xl:py-7 fixed top-0 left-0 font-inter z-50 bg-white">
       <div className="flex items-center justify-between">
         <img
           src={logo}

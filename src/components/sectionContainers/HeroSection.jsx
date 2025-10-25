@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import surveyImage from "../../assets/images/SurveyImage.png";
 import { motion } from "framer-motion";
-import { pre } from "framer-motion/client";
-import QuoteModal from "../pages/QuoteModal";
+import { colgroup, pre } from "framer-motion/client";
+import QuoteModal from "./sectionModals/QuoteModal";
 
 const HeroSection = () => {
   const [open, setOpen] = useState(false);
@@ -43,56 +43,58 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="w-full sm:min-h-[40rem] mx-auto py-10 flex flex-col items-center justify-center gap-7 sm:gap-3 md:flex-col lg:flex lg:flex-row lg:justify-center lg:items-center lg:gap-7 overflow-hidden ">
-      <motion.div
-        //? Animates the entire text container when it enters view
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.3 }} //? Trigger when 30% of the container is in view
-        className="sm:w-1/2 md:w-[70%] lg:w-[45%] sm:h-[31.8rem] lg:h-[28rem] flex flex-col items-center sm:flex sm:flex-col sm:items-start justify-center gap-8 px-5 py-7 md:flex md:flex-col md:items-center lg:flex lg:items-start"
-      >
-        <motion.h1
-          variants={textvariants} //? Use variants for h1
-          className="text-4xl md:text-5xl lg:text-6xl text-center md:text-center lg:text-start text-[#203C6E] font-inter font-medium hover:underline cursor-pointer sm:w:[85%] lg:w-[80%]"
+    <>
+      <div className="w-full sm:min-h-[40rem] mx-auto py-10 flex flex-col items-center justify-center gap-7 sm:gap-3 md:flex-col lg:flex lg:flex-row lg:justify-center lg:items-center lg:gap-7 overflow-hidden ">
+        <motion.div
+          //? Animates the entire text container when it enters view
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.3 }} //? Trigger when 30% of the container is in view
+          className="sm:w-1/2 md:w-[70%] lg:w-[45%] sm:h-[31.8rem] lg:h-[28rem] flex flex-col items-center sm:flex sm:flex-col sm:items-start justify-center gap-8 px-5 py-7 md:flex md:flex-col md:items-center lg:flex lg:items-start"
         >
-          AI-Powerd clarity for construction and beyond
-        </motion.h1>
+          <motion.h1
+            variants={textvariants} //? Use variants for h1
+            className="text-4xl md:text-5xl lg:text-6xl text-center md:text-center lg:text-start text-[#203C6E] font-inter font-medium hover:underline cursor-pointer sm:w:[85%] lg:w-[80%]"
+          >
+            AI-Powerd clarity for construction and beyond
+          </motion.h1>
 
-        <motion.p
-          variants={textvariants}
-          transition={{ delay: 0.2 }}
-          className="text-center md:text-center lg:text-start lg:text-[22px] text-lg sm:text-2xl text-[#111B2D] font-sfpro font-normal max-w-[80%] leading-[100%] tracking-[-1px] hover:underline cursor-pointer"
-        >
-          Turn field reality into dicisions you can act on. See progress
-          clearly, share it instantly, and move work forward.
-        </motion.p>
+          <motion.p
+            variants={textvariants}
+            transition={{ delay: 0.2 }}
+            className="text-center md:text-center lg:text-start lg:text-[22px] text-lg sm:text-2xl text-[#111B2D] font-sfpro font-normal max-w-[80%] leading-[100%] tracking-[-1px] hover:underline cursor-pointer"
+          >
+            Turn field reality into dicisions you can act on. See progress
+            clearly, share it instantly, and move work forward.
+          </motion.p>
 
-        <motion.span
-          variants={buttonVariants}
-          transition={{ delay: 0.4 }}
-          className="px-6 py-3 sm:px-9 sm:py-3 lg:px-9 lg:py-4 border rounded-[2.1rem] bg-gradient-to-r from-[#2763E5] via-[#0059FF] to-[#2087F4] text-lg leading-[100%] text-white font-sfpro font-medium"
-          onClick={() => setOpen((prev) => !prev)}
-        >
-          Get a Custom quote
-          {open && (
-            <QuoteModal
-              onClose={() => {
-                setOpen(false);
-              }}
-            />
-          )}
-        </motion.span>
-      </motion.div>
-      <motion.img
-        variants={imageVariant}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.3 }}
-        src={surveyImage}
-        alt=""
-        className="max-w-[20rem] md:h-[28rem] md:min-w-[28rem] lg:min-w-[28rem]"
-      />
-    </div>
+          <motion.span
+            variants={buttonVariants}
+            transition={{ delay: 0.4 }}
+            className="px-6 py-3 sm:px-9 sm:py-3 lg:px-9 lg:py-4 border rounded-[2.1rem] bg-gradient-to-r from-[#2763E5] via-[#0059FF] to-[#2087F4] text-lg leading-[100%] text-white font-sfpro font-medium hover:cursor-pointer"
+            onClick={() => setOpen((prev) => !prev)}
+          >
+            Get a Custom quote
+          </motion.span>
+        </motion.div>
+        <motion.img
+          variants={imageVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.3 }}
+          src={surveyImage}
+          alt=""
+          className="max-w-[20rem] md:h-[28rem] md:min-w-[28rem] lg:min-w-[28rem]"
+        />
+      </div>
+      {open && (
+        <QuoteModal
+          onClose={() => {
+            setOpen((prev) => !prev);
+          }}
+        />
+      )}
+    </>
   );
 };
 
