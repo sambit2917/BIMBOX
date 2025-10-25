@@ -9,7 +9,7 @@ const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="m-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 pt-4 sm:pt-5 md:pt-6 lg:pt-8 xl:pt-10 relative font-inter z-50 ">
+    <nav className="m-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 py-4 sm:py-4 md:py-5 lg:py-7 xl:pt-10 fixed top-0 left-0 font-inter z-50 bg-white">
       <div className="flex items-center justify-between">
         <img
           src={logo}
@@ -94,10 +94,27 @@ const NavBar = () => {
         }`}
       >
         <ul className="flex flex-col items-center gap-5 py-6 uppercase text-base text-[#111B2D] font-normal">
-          <NavLink to="/homeSection" className="hover:underline cursor-pointer py-2">Home</NavLink>
-          <NavLink to="/about" className="hover:underline cursor-pointer py-2">About</NavLink>
-          <NavLink to="/product" className="hover:underline cursor-pointer py-2">Product</NavLink>
-          <NavLink to="/pricing" className="hover:underline cursor-pointer py-2">Pricing</NavLink>
+          <NavLink
+            to="/homeSection"
+            className="hover:underline cursor-pointer py-2"
+          >
+            Home
+          </NavLink>
+          <NavLink to="/about" className="hover:underline cursor-pointer py-2">
+            About
+          </NavLink>
+          <NavLink
+            to="/product"
+            className="hover:underline cursor-pointer py-2"
+          >
+            Product
+          </NavLink>
+          <NavLink
+            to="/pricing"
+            className="hover:underline cursor-pointer py-2"
+          >
+            Pricing
+          </NavLink>
 
           {/* Mobile/Tablet Buttons */}
           <div className="flex flex-col gap-3 mt-4 w-11/12 max-w-xs px-4">
